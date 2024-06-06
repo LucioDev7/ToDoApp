@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(235deg,#FED9B7, #F07167);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    height: fit-content;
+    min-width: 350px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 40px 115px rgb(255, 0, 0);
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container h1 {
+    font-size: 2em;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.container form {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.inputContainer{
+    position: relative;
+    flex-grow: 1;
+}
+
+.container form input {
+    width: 100%;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.placeholder{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: #aaa;
+}    
+
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder{
+    top: -9px;
+    left: 10px;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+    padding: 3px 5px 0px 5px;
+}
+
+
+.container form button {
+    appearance: none;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid black;
+    background-color: #313131;
+    color: white;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+#tasksContainer {
+    width: 100%;
+}
+
+#noResults {
+    background-color: rgba(255,0,0,.5);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(155,0,0,.4);
+    text-align: center;
+}
+
+.visible {
+    display: block;
+}
+
+.noVisible {
+    display: none;
+}
+
+#noResults span {
+    color: rgba(155,0,0,.8);
+    font-weight: 600;
+}
+
+#resultsList {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+
+#resultsList li {
+    border: 1px solid #CCC;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#resultsList input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
