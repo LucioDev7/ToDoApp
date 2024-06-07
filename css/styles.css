@@ -132,6 +132,12 @@ input:not(:placeholder-shown) + .placeholder{
     cursor: pointer;
 }
 
+#resultsList li.selected{
+    text-decoration: line-through;
+    font-weight: bold;
+    background-color: grey;
+}
+
 #resultsList input[type=checkbox] {
     width: 16px;
     height: 16px;
